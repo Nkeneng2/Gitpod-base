@@ -24,4 +24,4 @@ tasks:
         composer install;
         mkdir -p var/log;
         mkdir -p var/cache;
-        bin/setup
+        bin/setup;
