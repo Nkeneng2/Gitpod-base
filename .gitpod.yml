@@ -8,19 +8,19 @@ ports:
     onOpen: ignore
 tasks:
  - name: Terminal
-  command: >
+   command: >
     echo "";
     echo "Commands you can try:";
     echo " * apachectl stop";
     echo " * apachectl start";
     echo " * gp open /var/log/apache2/access.log";
     echo " * gp open /var/log/apache2/error.log";
-  - name: Apache
-  command: >
+ - name: Apache
+   command: >
     apachectl start &&
     multitail /var/log/apache2/access.log -I /var/log/apache2/error.lo
-  - name: Shopware 6
-    command: >
+ - name: Shopware 6
+   command: >
         sleep 10;
         cd $GITPOD_REPO_ROOT;
         cd src;
