@@ -10,6 +10,12 @@ tasks:
  - name: Apache
    command: >
     apachectl start;
+ - name: Start MySQL
+   command: >
+    mysqld --initialize-insecure;
+    mysqld &
+    sleep 5;
+    echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'gitpod'; CREATE DATABASE shopware;" | mysql -uroot;
  - name: Composer
    command: >
     php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');";
