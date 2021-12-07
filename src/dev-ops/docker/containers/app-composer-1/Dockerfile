@@ -1,2 +1,0 @@
-FROM app-base
-ENV COMPOSER_VERSION=1
